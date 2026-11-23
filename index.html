@@ -1,189 +1,95 @@
+
 <!DOCTYPE html>
 <html lang="lo">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pepsi Laos - ຊ່າ... ເຕັມທີ່ກັບຊີວິດ</title>
-    <!-- ດຶງຟອນພາສາລາວ Noto Sans Lao ຈາກ Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* ຕັ້ງຄ່າພື້ນຖານ */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Noto Sans Lao', sans-serif;
-            scroll-behavior: smooth;
-        }
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Pepsi - Taste the Moment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        :root {
-            --pepsi-blue: #004B93;
-            --pepsi-dark: #002855;
-            --pepsi-red: #E32934;
-            --light-bg: #F4F7FB;
-            --white: #FFFFFF;
-        }
+<header>
+    <div class="logo">PEPSI</div>
+    <nav>
+        <a href="#home">ໜ້າຫຼັກ</a>
+        <a href="#products">ສິນຄ້າ</a>
+        <a href="#about">ກ່ຽວກັບ</a>
+        <a href="#contact">ຕິດຕໍ່</a>
+    </nav>
+</header>
 
-        body {
-            background-color: var(--light-bg);
-            color: #333;
-            line-height: 1.6;
-        }
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h1>PEPSI</h1>
+        <h2>ສົດຊື່ນທຸກເວລາ</h2>
+        <p>
+            ສຳຜັດລົດຊາດຄວາມສົດຊື່ນ
+            ກັບ Pepsi ເຢັນໆ ໃນທຸກໂອກາດ.
+        </p>
+        <a href="#products" class="btn">
+            ເບິ່ງສິນຄ້າ
+        </a>
+    </div>
 
-        /* ແຖບເມນູ (Navbar) */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 8%;
-            background-color: var(--pepsi-dark);
-            color: var(--white);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
+    <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=700"
+          alt="ນ້ຳອັດລົມ Pepsi">
+    </div>
+</section>
 
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+<section class="products" id="products">
+    <h2>ຜະລິດຕະພັນຂອງພວກເຮົາ</h2>
+    <p>ເລືອກຄວາມສົດຊື່ນທີ່ທ່ານມັກ</p>
 
-        .circle-logo {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--pepsi-red) 45%, var(--white) 45%, var(--white) 55%, var(--pepsi-blue) 55%);
-            display: inline-block;
-            border: 2px solid var(--white);
-        }
+    <div class="product-container">
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
+        <div class="product-card">
+            <img
+              src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=500"
+              alt="Pepsi Original">
+            <h3>Pepsi Original</h3>
+            <p>ລົດຊາດດັ້ງເດີມ ສົດຊື່ນ</p>
+            <span>ຂະໜາດ 325ml</span>
+        </div>
 
-        .nav-links a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
+        <div class="product-card">
+            <img
+              src="https://images.unsplash.com/photo-1554866585-cd94860890b7?w=500"
+              alt="Pepsi Cola">
+            <h3>Pepsi Cola</h3>
+            <p>ຄວາມຊ່າສົດຊື່ນໃນທຸກມື້</p>
+            <span>ຂະໜາດ 500ml</span>
+        </div>
 
-        .nav-links a:hover {
-            color: var(--pepsi-red);
-        }
+        <div class="product-card">
+            <img
+              src="https://images.unsplash.com/photo-1581636625402-29b2a704ef13?w=500"
+              alt="Pepsi Drink">
+            <h3>Pepsi Bottle</h3>
+            <p>ພົກພາງ່າຍ ດື່ມໄດ້ທຸກບ່ອນ</p>
+            <span>ຂະໜາດ 1.5L</span>
+        </div>
 
-        /* ສ່ວນ Hero */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 80px 8%;
-            background: linear-gradient(135deg, var(--pepsi-blue), var(--pepsi-dark));
-            color: var(--white);
-            min-height: 80vh;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
+    </div>
+</section>
 
-        .hero-content {
-            flex: 1;
-            min-width: 300px;
-        }
+<section class="about" id="about">
+    <h2>ກ່ຽວກັບ Pepsi</h2>
+    <p>
+        Pepsi ແມ່ນເຄື່ອງດື່ມນ້ຳອັດລົມ
+        ທີ່ມີລົດຊາດເປັນເອກະລັກ
+        ເໝາະສຳລັບທຸກໂອກາດ.
+    </p>
+</section>
 
-        .hero-content h1 {
-            font-size: 3rem;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
+<footer id="contact">
+    <h2>PEPSI</h2>
+    <p>ຂອບໃຈທີ່ເຂົ້າຊົມ Website ຂອງພວກເຮົາ</p>
+    <p>© 2026 Pepsi Product Website</p>
+</footer>
 
-        .hero-content h1 span {
-            color: #4DA8DA;
-        }
-
-        .hero-content p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-            max-width: 500px;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--pepsi-red);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 700;
-            transition: transform 0.3s, background 0.3s;
-        }
-
-        .btn-primary:hover {
-            background-color: #c41e28;
-            transform: translateY(-3px);
-        }
-
-        /* ຮູບກະປ໋ອງຈຳລອງ CSS */
-        .hero-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            min-width: 280px;
-        }
-
-        .can-mockup {
-            width: 160px;
-            height: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .can-top, .can-bottom {
-            width: 140px;
-            height: 15px;
-            background: #ccc;
-            border-radius: 10px;
-        }
-
-        .can-body {
-            width: 160px;
-            height: 270px;
-            background: linear-gradient(90deg, #003366, #0055A5, #003366);
-            border-radius: 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 20px 30px rgba(0,0,0,0.4);
-        }
-
-        .pepsi-globe {
-            width: 85px;
-            height: 85px;
-            border-radius: 50%;
-            background: linear-gradient(155deg, var(--pepsi-red) 44%, var(--white) 44%, var(--white) 56%, var(--pepsi-blue) 56%);
-            border: 3px solid var(--white);
-            margin-bottom: 15px;
-        }
-
-        .can-body h3 {
-            letter-spacing: 3px;
-            font-size: 1.5rem;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-        }
-
-        /* ສ່ວນສະແດງສ
+</body>
+</html>
